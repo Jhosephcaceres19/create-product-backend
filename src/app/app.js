@@ -9,6 +9,7 @@ app.use( morgan("dev"))
 app.get('/', (req, res) => {
     res.send('this is my api ')
 })
+app.use(express.json())
 app.use("/api/v1", router)
 
 module.exports = app;
